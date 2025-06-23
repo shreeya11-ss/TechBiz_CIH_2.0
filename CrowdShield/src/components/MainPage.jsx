@@ -1,60 +1,101 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './mainpage.css'; // Or your preferred CSS module/solution
 
-function MainPage() {
+// Assuming you have image assets in your public/images folder or imported
+import heroImage from '/public/download (1).jpeg'; // Placeholder for the top right image
+import mapImage from '/public/download (1).jpeg'; // Placeholder for the map image
+import cubeImage from '/public/download (1).jpeg'; // Placeholder for the cube image
+import crowdImage from '/public/download (1).jpeg'; // Placeholder for the crowd image
+
+function App() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6 text-white bg-black font-sans">
-      <header className="flex justify-between items-center py-4">
-        <div className="text-2xl font-bold">CrowdShield</div>
-        <nav className="flex gap-6 items-center">
-          <a href="#home" className="hover:underline">Home</a>
-          <a href="#about" className="hover:underline">About us</a>
-          <a href="#work" className="hover:underline">Work</a>
-          <Link to="dashboard"><button className="bg-gray-300 text-black px-4 py-1 rounded-full">Sign up</button></Link>
+    <div className="app-container">
+      {/* Header Section */}
+      <header className="header">
+        <div className="logo">
+          {/* SVG or Image for Crowd Shield logo */}
+          Crowd Shield
+        </div>
+        <nav className="nav-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#work">Work</a></li>
+          </ul>
         </nav>
+        <button className="sign-up-button">Login</button>
       </header>
 
-      <section className="flex flex-col md:flex-row justify-between items-center mt-10 gap-8">
-        <div>
-          <h1 className="text-4xl font-bold">Crowd Control System</h1>
-          <p className="text-lg text-gray-300 mt-2">Smart Crowd Monitoring</p>
-          <button className="mt-4 px-4 py-2 bg-white text-black rounded">Get Started</button>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>Crowd Monitoring System</h1>
+          <p>Smart Crowd Monitoring</p>
+          <button className="get-started-button">Get Started &rarr;</button>
         </div>
-        <img src="/images/map-1.jpg" alt="Map Visualization" className="max-w-md rounded-lg" />
+        <div className="hero-image">
+          <img src={heroImage} alt="City Lights at Night" />
+        </div>
       </section>
 
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-2xl p-6 flex flex-col md:flex-row items-center mt-12 gap-4">
-        <img src="/images/map-2.jpg" alt="Crowd map" className="w-36 rounded-lg" />
-        <p className="text-sm">
-          Ensure safety at large gatherings with real-time crowd analysis, geo-based alerts, and instant authority notifications. CrowdShield helps manage congestion, reduce risks, and maintain order using cutting-edge technology designed for temples, events, and public spaces.
-        </p>
+      {/* Real Time Monitoring Section */}
+      <section className="real-time-monitoring-section">
+        <div className="content-card"> {/* This card has a distinct background */}
+          <div className="card-image">
+            <img src={mapImage} alt="Map showing crowd data" />
+          </div>
+          <div className="card-text">
+            <h2>Real Time Monitoring</h2>
+            <p>
+              Ensure safety at large gatherings with real-time crowd analysis,
+              concerted alerts, and instant authority notifications. CrowdShield
+              helps manage congestion, reduce risks, and maintains safety using
+              cutting-edge technology designed for temples, events, and public
+              spaces. Take control before the crowd takes over.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section id="about" className="mt-12 flex flex-col md:flex-row items-center gap-6">
-        <div>
-          <h3 className="text-xl">About Us</h3>
-          <h4 className="text-lg text-gray-400">Optimized Reach</h4>
-          <p className="text-sm mt-2">
-            CrowdShield is a smart crowd monitoring system built to provide real-time crowd detection, location tracking, and smart alerts for event managers and local authorities.
+      {/* Designed for Public Spaces Section */}
+      <section className="designed-for-public-spaces-section">
+        <div className="content-text">
+          <h2>Designed for public spaces</h2>
+          <p>
+            Whether it's a busy metro station, a temple during festivities, or a city square,
+            CrowdShield adapts seamlessly – using existing smart infrastructure and AI-powered detection.
           </p>
-          <Link to="/about"><button className="mt-4 border border-white px-4 py-1 rounded hover:bg-white hover:text-black">Learn more</button></Link>
+          <a href="#learn-more-public-spaces" className="learn-more-link">Learn More &rarr;</a>
         </div>
-        <img src="/images/3d-box.png" alt="3D Cube" className="max-w-xs" />
+        <div className="content-image">
+          <img src={cubeImage} alt="Abstract colorful cube" />
+        </div>
       </section>
 
-      <section id="work" className="mt-12 flex flex-col md:flex-row items-center gap-6">
-        <img src="/images/crowd.jpg" alt="Crowd image" className="max-w-xs rounded-lg" />
-        <div>
-          <Link to="/work"><h3 className="text-xl">Work</h3></Link>
-          <h4 className="text-lg text-gray-400">Optimized Reach</h4>
-          <p className="text-sm mt-2">
-            Gain deeper insights into crowd behavior and levels using live data feeds and historical analysis.
-          </p>
-          <Link to="/work"><button className="mt-4 border border-white px-4 py-1 rounded hover:bg-white hover:text-black">Learn more</button></Link>
+      {/* Optimized Reach Section */}
+      <section className="optimized-reach-section">
+        <div className="content-card"> {/* This card also has a distinct background */}
+          <div className="card-image">
+            <img src={crowdImage} alt="Crowd gathered for an event" />
+          </div>
+          <div className="card-text">
+            <h2>Optimized Reach</h2>
+            <p>
+              Gain clear insights into crowd behavior and trends with simple, visual data – all
+              designed to support fast decision-making. With real-time location overview,
+              CrowdShield automatically sends alerts to authorities – no delays, no confusion.
+            </p>
+            <a href="#learn-more-optimized-reach" className="learn-more-link">Learn More &rarr;</a>
+          </div>
         </div>
       </section>
+
+      {/* You might want a footer here too */}
+      {/* <footer>
+        <p>&copy; 2025 Crowd Shield. All rights reserved.</p>
+      </footer> */}
     </div>
   );
 }
 
-export default MainPage;
+export default App;
