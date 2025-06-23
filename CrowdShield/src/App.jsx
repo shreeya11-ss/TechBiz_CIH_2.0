@@ -1,9 +1,8 @@
 import React from "react";
+import Dashboard from "./components/Dashboard";
 
 export default function App() {
   return (
-    <div className="text-4xl text-center text-white bg-blue-600 min-h-screen flex items-center justify-center">
-     CrowdShield 
-    </div>
+    <Dashboard/>
   );
 }
