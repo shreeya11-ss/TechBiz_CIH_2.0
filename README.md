@@ -89,3 +89,18 @@ npm install
 Set up Firebase
 
 Create a Firebase project
+
+ Future Enhancements
+Live CCTV feed integration
+
+Admin panel for managing zones and thresholds
+
+Crowd heatmaps
+
+Integration with emergency services
+
+Offline mobile alert system
+
+Developer- Khushi Pandey
+           shreeya sharma
+          Ritu Singh
