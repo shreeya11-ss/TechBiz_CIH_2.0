@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebaseConfig'
 import { useNavigate, Link } from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
 import {motion}from 'framer-motion'
 import './Signup.css';
 export default function Signup() {
