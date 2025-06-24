@@ -58,10 +58,6 @@ CrowdShield/
 ├── package.json
 ├── README.md
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🔧 Installation & Setup
