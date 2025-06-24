@@ -1,6 +1,6 @@
 import React from 'react';
 import './mainpage.css'; // Or your preferred CSS module/solution
-
+import { Link } from 'react-router-dom';
 // Assuming you have image assets in your public/images folder or imported
 import heroImage from '/public/download (1).jpeg'; // Placeholder for the top right image
 import mapImage from '/public/download (1).jpeg'; // Placeholder for the map image
@@ -23,7 +23,7 @@ function App() {
             <li><a href="#work">Work</a></li>
           </ul>
         </nav>
-        <button className="sign-up-button">Login</button>
+        <Link to='/login'><button className="sign-up-button">Login</button></Link>
       </header>
 
       {/* Hero Section */}
