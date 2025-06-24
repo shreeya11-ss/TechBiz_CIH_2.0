@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebaseconfig';
+import { db } from '. /firebaseconfig';
 
 const ZoneList = () => {
   const [zones, setZones] = useState([]);

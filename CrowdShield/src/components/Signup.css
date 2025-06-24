@@ -1,0 +1,222 @@
+/*
+ * This CSS file contains styles translated from the Tailwind CSS classes
+ * used in your Signup component.
+ * You no longer need Tailwind CSS installed or configured for these specific styles.
+ */
+
+/* Global Reset and Base Styles (important for consistent rendering) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Using 'Inter' as specified in general instructions, with sans-serif fallback */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-black px-4 */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.from-purple-900 {
+  --tw-gradient-from: #4B0082; /* Close to Tailwind's purple-900 */
+  --tw-gradient-to: rgba(75, 0, 130, 0); /* Transparent version for the gradient start */
+}
+
+.to-black {
+  --tw-gradient-to: #000000;
+}
+
+.px-4 {
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+}
+
+/* bg-black border border-purple-700 text-white p-8 rounded-2xl shadow-2xl w-full max-w-md backdrop-blur-md */
+.bg-black {
+  background-color: #000000;
+}
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.border-purple-700 {
+  border-color: #8A2BE2; /* Close to Tailwind's purple-700 */
+}
+
+.text-white {
+  color: #000000;
+}
+
+.p-8 {
+  padding: 2rem; /* 32px */
+}
+
+.rounded-2xl {
+  border-radius: 1rem; /* 16px */
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  /* Using a combination for better visual match */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem; /* 448px */
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  /* Fallback for browsers not supporting backdrop-filter.
+     Make the background semi-transparent for the blur effect to be noticeable. */
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* h2 .text-3xl font-bold mb-8 text-center text-purple-400 */
+.text-3xl {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* For better readability */
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-8 {
+  margin-bottom: 2rem; /* 32px */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-purple-400 {
+  color: #C084FC; /* Close to Tailwind's purple-400 */
+}
+
+/* input .w-full px-5 py-3 mb-5 bg-transparent border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition */
+input[type="email"],
+input[type="password"],
+input[type="tel"] { /* Added type="tel" for phone input */
+  width: 100%;
+  padding-left: 1.25rem; /* 20px */
+  padding-right: 1.25rem; /* 20px */
+  padding-top: 0.75rem; /* 12px */
+  padding-bottom: 0.75rem; /* 12px */
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #6B7280; /* Close to Tailwind's gray-500 */
+  border-radius: 0.5rem; /* 8px */
+  outline: none; /* Remove default focus outline */
+  color: #FFFFFF; /* Ensure text is visible */
+  transition-property: all; /* Matches 'transition' */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms; /* Matches 'transition' */
+}
+
+/* Placeholder styling */
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder {
+  color: #9CA3AF; /* A lighter gray for placeholders */
+  opacity: 1; /* Firefox default opacity */
+}
+
+/* Focus states for inputs */
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  border-color: #A78BFA; /* Close to Tailwind's purple-500 */
+  box-shadow: 0 0 0 2px #A78BFA, 0 0 #0000; /* Ring-2 purple-500 equivalent */
+}
+
+/* Margin utilities for inputs */
+.mb-5 {
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+/* button .w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-3 rounded-lg transition */
+button[type="submit"] {
+  width: 100%;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #A78BFA; /* Close to Tailwind's purple-500 */
+  --tw-gradient-to: rgba(167, 139, 250, 0);
+  --tw-gradient-to: #3B82F6; /* Close to Tailwind's blue-500 */
+  color: #FFFFFF;
+  font-weight: 600;
+  padding-top: 0.75rem; /* 12px */
+  padding-bottom: 0.75rem; /* 12px */
+  border-radius: 0.5rem; /* 8px */
+  transition-property: all; /* Matches 'transition' for hover/tap effects */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  border: none; /* Remove default button border */
+  cursor: pointer;
+}
+
+/* Button Hover and Active effects (simulating Framer Motion's whileHover/whileTap via CSS) */
+button[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+/* p .text-sm mt-6 text-center text-gray-300 */
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+
+.mt-6 {
+  margin-top: 1.5rem; /* 24px */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gray-300 {
+  color: #D1D5DB; /* Close to Tailwind's gray-300 */
+}
+
+/* Link .text-purple-400 hover:underline font-semibold */
+.text-purple-400.hover\:underline.font-semibold {
+  color: #C084FC; /* Matches text-purple-400 */
+  font-weight: 600;
+  text-decoration: none; /* Start without underline */
+}
+
+.text-purple-400.hover\:underline.font-semibold:hover {
+  text-decoration: underline;
+}

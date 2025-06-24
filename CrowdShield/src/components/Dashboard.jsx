@@ -57,23 +57,6 @@ export default function Dashboard() {
   const panelRef = useRef(null);
   const alertedZonesRef = useRef(new Set());
 
-//   const fetchCrowdCount = async (videoPath, zoneId) => {
-//   try {
-//     const res = await fetch("http://localhost:5000/count", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ videoPath })
-//     });
-//     const data = await res.json();
-//     if (data?.crowd !== undefined) {
-//       setFilteredZones(prev =>
-//         prev.map(z => z.id === zoneId ? { ...z, crowd: data.crowd } : z)
-//       );
-//     }
-//   } catch (err) {
-//     console.error("Failed to fetch crowd count:", err);
-//   }
-// };
 
 
   // Effect for handling high-risk alerts

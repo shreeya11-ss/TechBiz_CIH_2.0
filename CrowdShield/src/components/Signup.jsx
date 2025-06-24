@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebaseConfig'
 import { useNavigate, Link } from 'react-router-dom'
-
-
+import {motion}from 'framer-motion'
+import './Signup.css';
 export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')

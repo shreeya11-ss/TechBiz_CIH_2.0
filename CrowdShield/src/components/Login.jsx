@@ -4,7 +4,9 @@ import React, { useState } from 'react'
   import { signInWithEmailAndPassword } from 'firebase/auth'
   import { useNavigate, Link } from 'react-router-dom'
   import { auth } from '../firebaseConfig'
-  
+  // eslint-disable-next-line no-unused-vars
+  import {motion}from 'framer-motion'
+  import './Login.css';
 
   export default function Login() {
     const [email, setEmail] = useState('')
