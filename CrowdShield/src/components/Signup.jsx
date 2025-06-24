@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebaseconfig";
-import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebaseConfig";
+import { useNavigate, Link } from "react-router-dom";
 
-export default function Login() {
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert("✅ Login successful!");
-      navigate("/dashboard");
+      await createUserWithEmailAndPassword(auth, email, password);
+      alert("✅ Signup successful! Please log in.");
+      navigate("/"); // Navigate to the login page after successful signup
     } catch (error) {
-      alert("❌ Login failed: " + error.message);
+      alert("❌ Signup failed: " + error.message);
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100">
       <form
-        onSubmit={handleLogin}
+        onSubmit={handleSignup}
         className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md"
       >
         <h2 className="text-3xl font-extrabold mb-8 text-center text-gray-800">
-          Welcome Back!
+          Join Us!
         </h2>
         <input
           type="email"
@@ -44,17 +44,19 @@ export default function Login() {
           onChange={(e) => setPassword(e.target.value)}
           className="w-full px-5 py-3 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 ease-in-out"
         />
+        <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Enter phone number" />
+
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200"
+          className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors duration-200"
         >
-          Login
+          Signup
         </button>
 
         <p className="text-sm mt-6 text-center text-gray-700 font-medium">
-          Don’t have an account?{" "}
-          <Link to="/signup" className="text-blue-600 hover:underline font-semibold">
-            Signup
+          Already have an account?{" "}
+          <Link to="/" className="text-blue-600 hover:underline font-semibold">
+            Login
           </Link>
         </p>
       </form>
